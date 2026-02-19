@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Gasto</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head><body>
+
+<div class="container">
+    
+    <div class="form-box">
+        <h2>Registrar Gasto</h2>
+
+        <form id="form">
+            <div class="input-group">
+
+                <!-- Fecha -->
+                <input type="date" id="fecha" required>
+
+                <!-- Categoría -->
+                <input type="text" id="categoria" list="categorias-gastos"
+                       placeholder="Categoría" required>
+
+                <datalist id="categorias-gastos">
+                    <option value="Alimentación">
+                    <option value="Transporte">
+                    <option value="Entretenimiento">
+                    <option value="Salud">
+                </datalist>
+
+                <!-- Descripción -->
+                <input type="text" id="descripcion"
+                       placeholder="Descripción" required>
+
+                <!-- Monto -->
+                <input type="number" id="monto"
+                       placeholder="Monto"
+                       step="0.01"
+                       min="0.01"
+                       required>
+
+            </div>
+
+            <button type="submit">Registrar</button>
+        </form>
+
+
+    </div>
+</div>
+<script src="../controllers/layout.js"></script>
+
+<script src="../models/RegistroGastoModel.js"></script>
+<script src="../controllers/registroController.js"></script>
+
+
+</body>
+</html>
