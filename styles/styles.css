@@ -150,3 +150,62 @@ button:hover {
         0 -2px 6px rgba(107, 194, 255, 0.25);
 
 }
+
+/* Estilos para la lista de registros */
+.list-box {
+    background: #ffffff;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 
+        0 0 15px rgba(0, 182, 248, 0.5),
+        0 0 30px rgba(0, 182, 248, 0.5);
+}
+
+.list-box h2 {
+    text-align: center;
+    color: #009999;
+    margin-bottom: 20px;
+}
+
+.filtro-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtro-container select,
+.filtro-container input[type="date"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #333300;
+}
+
+.filtro-container label {
+    font-weight: bold;
+    color: #009999;
+}
+.tabla-registros {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-registros th,
+.tabla-registros td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.tabla-registros th {
+    background-color: #009999;
+    color: #fff;
+}
+
+.tabla-registros tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+

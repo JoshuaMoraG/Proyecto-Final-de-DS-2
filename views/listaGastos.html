@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>📋 Mis Gastos</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="list-box">
+            <h2>📋 Mis Gastos</h2>
+
+            <div class="filtro-container">
+                <label for="filtro-categoria">Filtrar por categoría:</label>
+                <select id="filtro-categoria">
+                    <!-- opciones se llenarán dinámicamente -->
+                </select>
+
+                <label for="filtro-fecha-desde">Desde:</label>
+                <input type="date" id="filtro-fecha-desde">
+
+                <label for="filtro-fecha-hasta">Hasta:</label>
+                <input type="date" id="filtro-fecha-hasta">
+
+                <label for="ordenar-por">Ordenar por:</label>
+                <select id="ordenar-por">
+                    <option value="">--</option>
+                    <option value="fecha_asc">Fecha ↑</option>
+                    <option value="fecha_desc">Fecha ↓</option>
+                    <option value="monto_asc">Monto ↑</option>
+                    <option value="monto_desc">Monto ↓</option>
+                </select>
+            </div>
+
+            <div id="lista-registros">
+                <!-- tabla o tarjetas generadas por el controlador -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../controllers/layout.js"></script>
+    <script src="../models/RegistroGastoModel.js"></script>
+    <script src="../controllers/listaController.js"></script>
+
+</body>
+</html>

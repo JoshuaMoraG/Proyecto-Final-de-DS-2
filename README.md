@@ -67,4 +67,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify]
+
+---
+
+## Funcionalidades del Proyecto
+
+El sistema permite registrar gastos, ver reportes agregados y, a partir de la última actualización, consultar **una lista de todos los registros guardados**.
+
+- **Agregar gasto** (`registroGasto.html`, `registroController.js`)
+- **Ver reportes estadísticos** (`reportes.html`, `reportesController.js`)
+- **Listar & filtrar registros** (`listaGastos.html`, `listaController.js`)
+  - se añadió filtrado por fecha y ordenamientos por monto/fecha
+
+Las vistas se apoyan en los modelos `RegistroGastoModel.js` y `reportesModel.js` para la lectura/escritura en `localStorage`. El filtrado se realiza por categoría desde el selector en la página de listado.
+(https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
