@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="https://i.pinimg.com/736x/33/5f/fe/335ffe0c00bbeac180a99a894dbabcf7.jpg">
                 <div class="logo-text">
                     <span>Control de</span>
-                    <span>Gastos</span>
+                    <span>  Gastos</span>
                 </div>
             </div>
 
             <nav class="nav">
-                <a href="index.html">Home</a>
+                <a href="index.html">Inicio</a>
                 <a href="registroGasto.html">Registrar Gasto</a>
                 <a href="listaGastos.html">Mis Gastos</a>
                 <a href="reportes.html">Reportes</a>
