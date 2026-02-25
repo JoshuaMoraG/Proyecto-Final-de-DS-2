@@ -1,30 +1,30 @@
-// Controlador de Reportes - Capa de Lógica de Negocio
+// Reports Controller - Business Logic Layer
 
 document.addEventListener("DOMContentLoaded", function () {
-    cargarReportes();
+    loadReports();
 });
 
-function cargarReportes() {
-    const contenedor = document.getElementById("contenido-reportes");
+function loadReports() {
+    const container = document.getElementById("report-content");
 
-    // Verificar si hay datos (usando el modelo)
-    if (!hayGastosRegistrados()) {
-        contenedor.innerHTML = `
-            <div class="no-datos">
-                <h2>📭 No hay gastos registrados</h2>
-                <p>Comienza a registrar tus gastos para ver los reportes</p>
-                <button onclick="location.href='registroGasto.html'">Registrar Gasto</button>
+    // Verify if there is data (using the model)
+    if (!haveExpensesBeenRegistered()) {
+        container.innerHTML = `
+            <div class="no-data">
+                <h2>💭 No expenses registered</h2>
+                <p>Start registering your expenses to see the reports</p>
+                <button onclick="location.href='registroGasto.html'">Register Expense</button>
             </div>
         `;
         return;
     }
 
-    // Obtener datos del modelo
-    const estadisticas = obtenerEstadisticasGenerales();
-    const totalGeneral = estadisticas.totalGastos;
-    const cantidadGastos = estadisticas.cantidadGastos;
-    const promedioGasto = estadisticas.promedioGasto;
-    const categoriasOrdenadas = obtenerCategoriasOrdenadas();
+    // Get data from the model
+    const statistics = getGeneralStatistics();
+    const totalAmount = statistics.totalExpenses;
+    const expenseCount = statistics.expenseCount;
+    const expenseAverage = statistics.expenseAverage;
+    const orderedCategories = getOrderedCategories();
 
     // Generar HTML de reportes
     contenedor.innerHTML = `
@@ -65,14 +65,14 @@ function cargarReportes() {
     generarGrafico();
 }
 
-function generarListaCategorias(categoriasOrdenadas) {
+function generateCategoryList(orderedCategories) {
     let html = '';
 
-    categoriasOrdenadas.forEach(({ categoria, monto }) => {
+    orderedCategories.forEach(({ category, amount }) => {
         html += `
-            <div class="categoria-item">
-                <span class="categoria-nombre">${categoria}</span>
-                <span class="categoria-monto">₡${monto.toFixed(2)}</span>
+            <div class="category-item">
+                <span class="category-name">${category}</span>
+                <span class="category-amount">₡${amount.toFixed(2)}</span>
             </div>
         `;
     });
@@ -80,16 +80,16 @@ function generarListaCategorias(categoriasOrdenadas) {
     return html;
 }
 
-function generarGrafico() {
-    const ctx = document.getElementById('graficoCategorias').getContext('2d');
+function generateChart() {
+    const ctx = document.getElementById('chartCategories').getContext('2d');
 
-    // Obtener datos del modelo
-    const datosGrafico = obtenerDatosGrafico();
-    const categorias = datosGrafico.labels;
-    const montos = datosGrafico.data;
+    // Get data from the model
+    const chartData = getChartData();
+    const categories = chartData.labels;
+    const amounts = chartData.data;
 
-    // Colores para las barras
-    const colores = [
+    // Colors for the bars
+    const colors = [
         'rgba(0, 153, 153, 0.8)',   
         'rgba(255, 153, 204, 0.8)',  
         'rgba(107, 194, 255, 0.8)',  
@@ -102,12 +102,12 @@ function generarGrafico() {
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: categorias,
+            labels: categories,
             datasets: [{
-                label: 'Total Gastado (₡)',
-                data: montos,
-                backgroundColor: colores.slice(0, categorias.length),
-                borderColor: colores.slice(0, categorias.length).map(c => c.replace('0.8', '1')),
+                label: 'Total Spent (₡)',
+                data: amounts,
+                backgroundColor: colors.slice(0, categories.length),
+                borderColor: colors.slice(0, categories.length).map(c => c.replace('0.8', '1')),
                 borderWidth: 2,
                 borderRadius: 8,
             }]

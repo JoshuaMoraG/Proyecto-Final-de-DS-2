@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>📝 Register Expense</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head><body>
+
+        <div class="container">
+
+            <div class="form-box">
+                <h2>📝 Register Expense</h2>
+
+                <form id="form">
+                    <div class="input-group">
+
+                        <!-- Date -->
+                        <label for="date">📅 Date</label>
+                        <input type="date" id="date" required>
+
+                        <!-- Category -->
+                        <label for="category">🏷️ Category</label>
+                        <input type="text" id="category" list="categories-expenses" required>
+
+                        <datalist id="categories-expenses">
+                            <option value="Food">
+                            <option value="Transportation">
+                            <option value="Entertainment">
+                            <option value="Health">
+                        </datalist>
+
+                        <!-- Description -->
+                        <label for="description">📝 Description</label>
+                        <input type="text" id="description" required>
+
+                        <!-- Amount -->
+                        <label for="amount">💰 Amount</label>
+                        <input type="number" id="amount"
+                               placeholder="₡0.00"
+                               step="0.01"
+                               min="0.01"
+                               required>
+
+                    </div>
+
+                    <button type="submit">💾 Register Expense</button>
+                </form>
+            </div>
+        </div>
+        <script src="../controllers/layout.js"></script>
+        <script src="../models/RegistroGastoModel.js"></script>
+        <script src="../controllers/registroController.js"></script>
+
+
+    </body>
+</html>

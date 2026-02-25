@@ -1,4 +1,4 @@
-/* Contenedor principal de la vista */
+/* Main container of the view */
 .reportes-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -7,16 +7,16 @@
     /* Espacio para no chocar con el layout superior */
 }
 
-/* Tarjetas generales de reporte */
-.reporte-card {
+/* General report cards */
+.report-card {
     background: #ffffff;
     padding: 25px;
     border-radius: 16px;
     box-shadow: 0 0 15px rgba(0, 182, 248, 0.3);
 }
 
-/* Títulos dentro de cada tarjeta */
-.reporte-card h3 {
+/* Titles within each card */
+.report-card h3 {
     color: #009999;
     margin-top: 0;
     margin-bottom: 15px;
@@ -25,8 +25,8 @@
     padding-bottom: 10px;
 }
 
-/* Total general destacado */
-.total-general {
+/* Total amount highlighted */
+.total-amount {
     font-size: 36px;
     font-weight: bold;
     color: #009999;
@@ -34,8 +34,8 @@
     margin: 20px 0;
 }
 
-/* Lista de categorías */
-.categoria-item {
+/* Category list */
+.category-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,21 +46,21 @@
     border-left: 4px solid #009999;
 }
 
-/* Nombre de categoría */
-.categoria-nombre {
+/* Category name */
+.category-name {
     font-weight: bold;
     color: #333;
 }
 
-/* Monto por categoría */
-.categoria-monto {
+/* Amount per category */
+.category-amount {
     color: #009999;
     font-weight: bold;
     font-size: 18px;
 }
 
-/* Contenedor del gráfico */
-.grafico-container {
+/* Chart container */
+.chart-container {
     background: #ffffff;
     padding: 25px;
     border-radius: 16px;
@@ -68,8 +68,8 @@
     margin-bottom: 30px;
 }
 
-/* Título del gráfico */
-.grafico-container h3 {
+/* Chart title */
+.chart-container h3 {
     color: #009999;
     margin-top: 0;
     margin-bottom: 20px;
@@ -77,7 +77,7 @@
     text-align: center;
 }
 
-/* Resumen superior (cantidad y promedio) */
+/* Upper summary (count and average) */
 .resumen-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -85,7 +85,7 @@
     margin-bottom: 20px;
 }
 
-/* Caja individual del resumen */
+/* Individual summary box */
 .stat-box {
     background: linear-gradient(135deg, #009999, #6BC2FF);
     color: #ffffff;
@@ -94,21 +94,21 @@
     text-align: center;
 }
 
-/* Etiqueta pequeña dentro del resumen */
+/* Small label inside the summary */
 .stat-label {
     font-size: 14px;
     opacity: 0.9;
     margin-bottom: 5px;
 }
 
-/* Valor numérico destacado */
+/* Highlighted numeric value */
 .stat-value {
     font-size: 24px;
     font-weight: bold;
 }
 
-/* Estado vacío cuando no hay gastos */
-.no-datos {
+/* Empty state when there are no expenses */
+.no-data {
     text-align: center;
     padding: 40px;
     font-size: 18px;
@@ -116,11 +116,11 @@
 }
 
 /*
- * Archivo: reporteStyle.css
- * Módulo: Reportes
- * Descripción: Contiene los estilos específicos de la vista de Reportes.
- *              Se mantiene separado de styles.css para conservar
- *              la organización modular del sistema.
+ * File: reporteStyle.css
+ * Module: Reports
+ * Description: Contains the specific styles for the Reports view.
+ *              Kept separate from styles.css to maintain
+ *              the modular organization of the system.
  */
 
 .reportes-container {
@@ -136,14 +136,14 @@
     margin-bottom: 30px;
 }
 
-.reporte-card {
+.report-card {
     background: #ffffff;
     padding: 25px;
     border-radius: 16px;
     box-shadow: 0 0 15px rgba(0, 182, 248, 0.3);
 }
 
-.reporte-card h3 {
+.report-card h3 {
     color: #009999;
     margin-top: 0;
     margin-bottom: 15px;
@@ -152,7 +152,7 @@
     padding-bottom: 10px;
 }
 
-.total-general {
+.total-amount {
     font-size: 36px;
     font-weight: bold;
     color: #009999;
@@ -160,7 +160,7 @@
     margin: 20px 0;
 }
 
-.categoria-item {
+.category-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,18 +171,18 @@
     border-left: 4px solid #009999;
 }
 
-.categoria-nombre {
+.category-name {
     font-weight: bold;
     color: #333;
 }
 
-.categoria-monto {
+.category-amount {
     color: #009999;
     font-weight: bold;
     font-size: 18px;
 }
 
-.grafico-container {
+.chart-container {
     background: #ffffff;
     padding: 25px;
     border-radius: 16px;
@@ -190,7 +190,7 @@
     margin-bottom: 30px;
 }
 
-.grafico-container h3 {
+.chart-container h3 {
     color: #009999;
     margin-top: 0;
     margin-bottom: 20px;
@@ -224,8 +224,8 @@
     font-weight: bold;
 }
 
-/* Estado vacío cuando no existen registros */
-.no-datos {
+/* Empty state when no records exist */
+.no-data {
     text-align: center;
     padding: 40px;
     font-size: 18px;

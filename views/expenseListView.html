@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📋 My Expenses</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="list-box">
+            <h2>📋 My Expenses</h2>
+
+            <div class="filtro-container">
+                <label for="filter-category">Filter by category:</label>
+                <select id="filter-category">
+                   
+                </select>
+
+                <label for="filter-date-from">From:</label>
+                <input type="date" id="filter-date-from">
+
+                <label for="filter-date-to">To:</label>
+                <input type="date" id="filter-date-to">
+
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="">--</option>
+                    <option value="date_asc">Date ↑</option>
+                    <option value="date_desc">Date ↓</option>
+                    <option value="amount_asc">Amount ↑</option>
+                    <option value="amount_desc">Amount ↓</option>
+                </select>
+            </div>
+
+            <div id="expense-list">
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="../controllers/layout.js"></script>
+    <script src="../models/RegistroGastoModel.js"></script>
+    <script src="../controllers/listaController.js"></script>
+
+</body>
+</html>
