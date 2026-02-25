@@ -27,42 +27,42 @@ function loadReports() {
     const orderedCategories = getOrderedCategories();
 
     // Generar HTML de reportes
-    contenedor.innerHTML = `
+    container.innerHTML = `
         <!-- Resumen de estadísticas -->
         <div class="resumen-stats">
             <div class="stat-box">
                 <div class="stat-label">Total de Gastos</div>
-                <div class="stat-value">${cantidadGastos}</div>
+                <div class="stat-value">${expenseCount}</div>
             </div>
             <div class="stat-box">
                 <div class="stat-label">Promedio por Gasto</div>
-                <div class="stat-value">₡${promedioGasto.toFixed(2)}</div>
+                <div class="stat-value">₡${expenseAverage.toFixed(2)}</div>
             </div>
         </div>
 
         <!-- Total General -->
-        <div class="reporte-card">
+        <div class="report-card">
             <h3>💰 Total General</h3>
-            <div class="total-general">₡${totalGeneral.toFixed(2)}</div>
+            <div class="total-general">₡${totalAmount.toFixed(2)}</div>
         </div>
 
         <!-- Totales por Categoría -->
-        <div class="reporte-card">
+        <div class="report-card">
             <h3>📋 Totales por Categoría</h3>
             <div id="categorias-lista">
-                ${generarListaCategorias(categoriasOrdenadas)}
+                ${generateCategoryList(orderedCategories)}
             </div>
         </div>
 
         <!-- Gráfico -->
-        <div class="grafico-container">
+        <div class="chart-container">
             <h3>📊 Distribución de Gastos por Categoría</h3>
-            <canvas id="graficoCategorias"></canvas>
+            <canvas id="chartCategories"></canvas>
         </div>
     `;
 
     // Generar gráfico (usando datos del modelo)
-    generarGrafico();
+    generateChart();
 }
 
 function generateCategoryList(orderedCategories) {
