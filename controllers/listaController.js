@@ -1,15 +1,28 @@
-// Controlador para la vista de listado de gastos
-
+/**
+ * Controlador de la vista de lista de gastos.
+ *
+ * Inicializa los filtros de la interfaz, carga la lista inicial de registros
+ * y reactiva la recarga cuando cambian filtros u orden.
+ *
+ * Dependencias externas:
+ * - `obtenerCategoriasUnicas()`
+ * - `obtenerGastosFiltrados(categoria, fechaDesde, fechaHasta)`
+ * - `ordenarGastos(registros, criterio, direccion)`
+ */
 document.addEventListener("DOMContentLoaded", function () {
     inicializarFiltros();
     cargarLista();
 
-    // escuchar cambios en controles de filtro/orden
     const filtroSelect = document.getElementById("filtro-categoria");
     const fechaDesde = document.getElementById("filtro-fecha-desde");
     const fechaHasta = document.getElementById("filtro-fecha-hasta");
     const ordenSelect = document.getElementById("ordenar-por");
 
+    /**
+     * Lee los valores actuales de los controles de filtro/orden y recarga la lista.
+     * @private
+     * @returns {void}
+     */
     function actualizar() {
         cargarLista(
             filtroSelect ? filtroSelect.value : '',
@@ -25,8 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ordenSelect) ordenSelect.addEventListener("change", actualizar);
 });
 
+
 /**
- * Llena el dropdown de filtro con las categorías únicas
+ * Inicializa el select de categorías en la interfaz.
+ * Busca el elemento `#filtro-categoria` y lo rellena con las categorías
+ * devueltas por `obtenerCategoriasUnicas()`.
+ * @returns {void}
  */
 function inicializarFiltros() {
     const filtroSelect = document.getElementById("filtro-categoria");
@@ -40,14 +57,29 @@ function inicializarFiltros() {
     filtroSelect.innerHTML = html;
 }
 
+
 /**
- * Recupera y muestra los registros, opcionalmente filtrados por categoría.
- * @param {string} categoria
+ * Carga y renderiza la lista de registros de gasto.
+ *
+ * @param {string} [categoria=""] - Filtra por categoría (cadena vacía = todas).
+ * @param {string} [fechaDesde=""] - Fecha mínima para filtrar (formato compatible con `obtenerGastosFiltrados`).
+ * @param {string} [fechaHasta=""] - Fecha máxima para filtrar.
+ * @param {string} [orden=""] - Orden en formato "criterio_direccion" (ej. "fecha_desc").
+ * @returns {void}
+ *
+ * Dependencias:
+ * - `obtenerGastosFiltrados(categoria, fechaDesde, fechaHasta)` debe devolver
+ *   un array de objetos con al menos las propiedades: `fecha`, `categoria`, `descripcion`, `monto`.
+ * - `ordenarGastos(registros, criterio, direccion)` ordena y devuelve el array.
+ *
+ * Comportamiento:
+ * - Si no hay elemento `#lista-registros` no hace nada.
+ * - Si no hay registros muestra un párrafo con la clase `no-datos`.
+ * - Si hay registros construye una tabla HTML con las columnas Fecha, Categoría, Descripción y Monto.
  */
 function cargarLista(categoria = "", fechaDesde = "", fechaHasta = "", orden = "") {
     let registros = obtenerGastosFiltrados(categoria, fechaDesde, fechaHasta);
 
-    // aplicar ordenamiento si se especifica
     if (orden) {
         const [criterio, direccion] = orden.split("_");
         registros = ordenarGastos(registros, criterio, direccion);
@@ -95,3 +127,4 @@ function cargarLista(categoria = "", fechaDesde = "", fechaHasta = "", orden = "
 
     contenedor.innerHTML = html;
 }
+
