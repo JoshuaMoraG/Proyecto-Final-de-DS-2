@@ -1,11 +1,24 @@
 
-//Controlador del registro de gastos
+/**
+ * Controlador del Registro de Gastos
+ * ====================================
+ * Gestiona la funcionalidad del formulario para registrar nuevos gastos.
+ * Valida los datos ingresados y los guarda en el almacenamiento local.
+ */
+
 
 document.getElementById("form").addEventListener("submit", function (e) {
-    e.preventDefault();    // Evita el envío por defecto del formulario
+    e.preventDefault();
 
+    /**
+     * Objeto Gasto
+     * @type {Object}
+     * @property {string} fecha
+     * @property {string} categoria 
+     * @property {string} descripcion 
+     * @property {number} monto 
+     */
 
-    // Obtiene los valores del formulario y crea el objeto gasto
     const gasto = {
         fecha: document.getElementById("fecha").value,
         categoria: document.getElementById("categoria").value,
@@ -13,22 +26,32 @@ document.getElementById("form").addEventListener("submit", function (e) {
         monto: parseFloat(document.getElementById("monto").value)
     };
 
-    // Validación de campos obligatorios
+    /**
+     * VALIDACIÓN 1: Verifica que todos los campos requeridos estén completos
+     * - Valida que la fecha no esté vacía
+     * - Valida que la categoría no esté vacía
+     * - Valida que la descripción no esté vacía
+     * - Valida que el monto sea un número válido (no NaN)
+     */
+
     if (!gasto.fecha || !gasto.categoria || !gasto.descripcion || isNaN(gasto.monto)) {
         alert("⚠️ Todos los campos son obligatorios");
         return;
     }
 
-    // Validación de monto positivo
+    /**
+     * VALIDACIÓN 2: Verifica que el monto sea un valor positivo
+     * - El monto debe ser mayor a 0
+     * - Previene el registro de gastos con montos negativos o cero
+     */
+
     if (gasto.monto <= 0) {
         alert("️⚠️ El monto debe ser mayor a cero");
         return;
     }
 
-    // Guarda el gasto si pasa las validaciones
     guardarGasto(gasto);
 
-    // Notifica éxito y limpia el formulario
     alert("✅ Gasto registrado correctamente");
     this.reset();
 });

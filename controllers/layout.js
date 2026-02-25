@@ -33,8 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </footer>
     `;
 
-    // Inserta el header al inicio del body
     document.body.insertAdjacentHTML("afterbegin", headerHTML);
-    // Inserta el footer al final del body
     document.body.insertAdjacentHTML("beforeend", footerHTML);
 });
