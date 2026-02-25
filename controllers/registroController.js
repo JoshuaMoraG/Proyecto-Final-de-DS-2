@@ -18,7 +18,6 @@ document.getElementById("form").addEventListener("submit", function (e) {
      * @property {string} descripcion 
      * @property {number} monto 
      */
-
     const gasto = {
         fecha: document.getElementById("fecha").value,
         categoria: document.getElementById("categoria").value,
@@ -33,7 +32,6 @@ document.getElementById("form").addEventListener("submit", function (e) {
      * - Valida que la descripción no esté vacía
      * - Valida que el monto sea un número válido (no NaN)
      */
-
     if (!gasto.fecha || !gasto.categoria || !gasto.descripcion || isNaN(gasto.monto)) {
         alert("⚠️ Todos los campos son obligatorios");
         return;

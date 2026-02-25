@@ -1,6 +1,20 @@
+/**
+ * Controlador de Layout Global
+ * ============================
+ * Carga y renderiza los componentes header y footer en todas las páginas
+ * Se ejecuta cuando el DOM está completamente cargado.
+ */
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Definición del HTML del encabezado (header)
+    /**
+     * HTML del Header
+     * ============================
+     * - Logo con imagen y texto de la aplicación
+     * - Navegación principal con enlaces a todas las páginas
+     * Se inserta al inicio del body en todas las páginas
+     */
 
     const headerHTML = `
         <header class="header">
@@ -21,7 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
         </header>
     `;
 
-    // Definición del HTML del pie de página (footer)
+    /**
+     * HTML del Footer
+     * ================================
+     * Componente reutilizable que incluye:
+     * - Copyright y año de la aplicación
+     * - Créditos de los desarrolladores con sus códigos de estudiante
+     * Se inserta al final del body en todas las páginas
+     */
     const footerHTML = `
         <footer class="footer">
             <p>© 2026 Control de Gastos</p>

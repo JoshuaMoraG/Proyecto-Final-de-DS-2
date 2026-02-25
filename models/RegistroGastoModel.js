@@ -17,7 +17,7 @@ function guardarGasto(gasto) {
 function obtenerCategoriasUnicas() {
     const gastos = obtenerGastos();
     const categorias = gastos.map(g => g.categoria);
-    // eliminar duplicados
+
     return [...new Set(categorias)];
 }
 
@@ -30,12 +30,12 @@ function obtenerCategoriasUnicas() {
 function obtenerGastosFiltrados(categoria, fechaDesde, fechaHasta) {
     let gastos = obtenerGastos();
 
-    // filtro por categoria
+
     if (categoria && categoria !== '' && categoria !== 'Todos') {
         gastos = gastos.filter(g => g.categoria === categoria);
     }
 
-    // filtro por rango de fechas (incluye ambas)
+
     if (fechaDesde) {
         gastos = gastos.filter(g => g.fecha >= fechaDesde);
     }
