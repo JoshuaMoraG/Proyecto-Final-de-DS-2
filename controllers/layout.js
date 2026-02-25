@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <nav class="nav">
                 <a href="index.html">Home</a>
-                <a href="registroGasto.html">Register Expense</a>
-                <a href="listaGastos.html">My Expenses</a>
-                <a href="reportes.html">Reports</a>
+                <a href="expenseRecordView.html">Register Expense</a>
+                <a href="expenseListView.html">My Expenses</a>
+                <a href="reportsView.html">Reports</a>
             </nav>
         </header>
     `;
