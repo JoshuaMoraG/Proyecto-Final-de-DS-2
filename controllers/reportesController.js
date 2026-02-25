@@ -90,9 +90,9 @@ function generarGrafico() {
 
     // Colores para las barras
     const colores = [
-        'rgba(0, 153, 153, 0.8)',   // #009999
-        'rgba(255, 153, 204, 0.8)',  // #ff99cc
-        'rgba(107, 194, 255, 0.8)',  // #6BC2FF
+        'rgba(0, 153, 153, 0.8)',   
+        'rgba(255, 153, 204, 0.8)',  
+        'rgba(107, 194, 255, 0.8)',  
         'rgba(255, 99, 132, 0.8)',
         'rgba(75, 192, 192, 0.8)',
         'rgba(255, 205, 86, 0.8)',

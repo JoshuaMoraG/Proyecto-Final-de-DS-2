@@ -72,7 +72,7 @@ function obtenerDatosGrafico() {
 
 /**
  * Verifica si hay gastos registrados
- * @returns {boolean} True si hay gastos, false si no
+ * @returns {boolean} 
  */
 function hayGastosRegistrados() {
     const gastos = obtenerGastos();
