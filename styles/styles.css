@@ -12,7 +12,7 @@ body {
     background: linear-gradient(135deg, #120633, #220839);
 }
 
-/* CONTENEDOR PRINCIPAL REGISTRO DE GASTO*/
+/* MAIN CONTAINER FOR EXPENSE REGISTRATION */
 .container {
     margin-top: 50px;
     display: flex;
@@ -22,7 +22,7 @@ body {
     padding-top: 80px;
 }
 
-/* CAJA DEL FORM */
+/* FORM BOX */
 .form-box {
     background: #ffffff;
     padding: 10px;
@@ -33,7 +33,7 @@ body {
         0 0 30px rgba(0, 182, 248, 0.5);
 }
 
-/* TÍTULO */
+/* TITLE */
 .form-box h2 {
     text-align: center;
     color: #009999;
@@ -50,13 +50,13 @@ body {
     outline: none;
 }
 
-/* EFECTO FOCUS */
+/* FOCUS EFFECT */
 .input-group input:focus {
     border-color: #663300;
     box-shadow: 0 0 6px rgba(255, 105, 180, 0.6);
 }
 
-/* BOTÓN */
+/* BUTTON */
 button {
    width: fit-content;
   min-width: 160px;
@@ -166,7 +166,7 @@ body {
 
 }
 
-/* Estilos para la lista de registros */
+/* Styles for the records list */
 .list-box {
     background: #ffffff;
     padding: 20px;
@@ -203,24 +203,24 @@ body {
     font-weight: bold;
     color: #009999;
 }
-.tabla-registros {
+.expense-table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.tabla-registros th,
-.tabla-registros td {
+.expense-table th,
+.expense-table td {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
 }
 
-.tabla-registros th {
+.expense-table th {
     background-color: #009999;
     color: #fff;
 }
 
-.tabla-registros tbody tr:nth-child(even) {
+.expense-table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 

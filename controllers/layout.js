@@ -1,19 +1,19 @@
 /**
- * Controlador de Layout Global
+ * Global Layout Controller
  * ============================
- * Carga y renderiza los componentes header y footer en todas las páginas
- * Se ejecuta cuando el DOM está completamente cargado.
+ * Loads and renders header and footer components on all pages
+ * Executes when the DOM is fully loaded.
  */
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
     /**
-     * HTML del Header
+     * Header HTML
      * ============================
-     * - Logo con imagen y texto de la aplicación
-     * - Navegación principal con enlaces a todas las páginas
-     * Se inserta al inicio del body en todas las páginas
+     * - Logo with image and application text
+     * - Main navigation with links to all pages
+     * Inserted at the beginning of the body on all pages
      */
 
     const headerHTML = `
@@ -21,31 +21,31 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="logo" onclick="location.href='index.html'">
                 <img src="https://i.pinimg.com/736x/33/5f/fe/335ffe0c00bbeac180a99a894dbabcf7.jpg">
                 <div class="logo-text">
-                    <span>Control de</span>
-                    <span>  Gastos</span>
+                    <span>Expense</span>
+                    <span>  Control</span>
                 </div>
             </div>
 
             <nav class="nav">
-                <a href="index.html">Inicio</a>
-                <a href="registroGasto.html">Registrar Gasto</a>
-                <a href="listaGastos.html">Mis Gastos</a>
-                <a href="reportes.html">Reportes</a>
+                <a href="index.html">Home</a>
+                <a href="registroGasto.html">Register Expense</a>
+                <a href="listaGastos.html">My Expenses</a>
+                <a href="reportes.html">Reports</a>
             </nav>
         </header>
     `;
 
     /**
-     * HTML del Footer
+     * Footer HTML
      * ================================
-     * Componente reutilizable que incluye:
-     * - Copyright y año de la aplicación
-     * - Créditos de los desarrolladores con sus códigos de estudiante
-     * Se inserta al final del body en todas las páginas
+     * Reusable component that includes:
+     * - Copyright and year of the application
+     * - Credits of developers with their student codes
+     * Inserted at the end of the body on all pages
      */
     const footerHTML = `
         <footer class="footer">
-            <p>© 2026 Control de Gastos</p>
+            <p>© 2026 Expense Control</p>
             <p>Andrès Castro(C5D935)
             / María Celeste Moreno(C15299)
             / Joshua Mora(C15079)
