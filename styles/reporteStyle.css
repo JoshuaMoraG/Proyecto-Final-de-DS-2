@@ -1,0 +1,233 @@
+/* Contenedor principal de la vista */
+.reportes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px;
+    /* Espacio para no chocar con el layout superior */
+}
+
+/* Tarjetas generales de reporte */
+.reporte-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 182, 248, 0.3);
+}
+
+/* Títulos dentro de cada tarjeta */
+.reporte-card h3 {
+    color: #009999;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #ff99cc;
+    padding-bottom: 10px;
+}
+
+/* Total general destacado */
+.total-general {
+    font-size: 36px;
+    font-weight: bold;
+    color: #009999;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Lista de categorías */
+.categoria-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 8px 0;
+    background: #f0f9ff;
+    border-radius: 8px;
+    border-left: 4px solid #009999;
+}
+
+/* Nombre de categoría */
+.categoria-nombre {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Monto por categoría */
+.categoria-monto {
+    color: #009999;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Contenedor del gráfico */
+.grafico-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 182, 248, 0.3);
+    margin-bottom: 30px;
+}
+
+/* Título del gráfico */
+.grafico-container h3 {
+    color: #009999;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Resumen superior (cantidad y promedio) */
+.resumen-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Caja individual del resumen */
+.stat-box {
+    background: linear-gradient(135deg, #009999, #6BC2FF);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Etiqueta pequeña dentro del resumen */
+.stat-label {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+/* Valor numérico destacado */
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estado vacío cuando no hay gastos */
+.no-datos {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #999;
+}
+
+/*
+ * Archivo: reporteStyle.css
+ * Módulo: Reportes
+ * Descripción: Contiene los estilos específicos de la vista de Reportes.
+ *              Se mantiene separado de styles.css para conservar
+ *              la organización modular del sistema.
+ */
+
+.reportes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.reportes-titulo {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.reporte-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 182, 248, 0.3);
+}
+
+.reporte-card h3 {
+    color: #009999;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #ff99cc;
+    padding-bottom: 10px;
+}
+
+.total-general {
+    font-size: 36px;
+    font-weight: bold;
+    color: #009999;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.categoria-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 8px 0;
+    background: #f0f9ff;
+    border-radius: 8px;
+    border-left: 4px solid #009999;
+}
+
+.categoria-nombre {
+    font-weight: bold;
+    color: #333;
+}
+
+.categoria-monto {
+    color: #009999;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.grafico-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 182, 248, 0.3);
+    margin-bottom: 30px;
+}
+
+.grafico-container h3 {
+    color: #009999;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.resumen-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background: linear-gradient(135deg, #009999, #6BC2FF);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estado vacío cuando no existen registros */
+.no-datos {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #777;
+}
