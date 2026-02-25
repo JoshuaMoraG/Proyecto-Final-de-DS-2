@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Definición del HTML del encabezado (header)
+
     const headerHTML = `
         <header class="header">
             <div class="logo" onclick="location.href='index.html'">
@@ -18,7 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </nav>
         </header>
     `;
-        const footerHTML = `
+
+    // Definición del HTML del pie de página (footer)
+    const footerHTML = `
         <footer class="footer">
             <p>© 2026 Control de Gastos</p>
             <p>Andrès Castro(C5D935)
@@ -28,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
         </p>
         </footer>
     `;
-        document.body.insertAdjacentHTML("afterbegin", headerHTML);
-        document.body.insertAdjacentHTML("beforeend", footerHTML);
-        });
+
+    // Inserta el header al inicio del body
+    document.body.insertAdjacentHTML("afterbegin", headerHTML);
+    // Inserta el footer al final del body
+    document.body.insertAdjacentHTML("beforeend", footerHTML);
+});
