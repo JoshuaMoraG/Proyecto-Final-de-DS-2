@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Home </title>
-    <link rel="stylesheet" href="../styles/styles.css"><div class="container">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Expense Control</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-box">
+            <h1 class="welcome-title">Welcome to Your Expense Manager!</h1>
+            
+            <div class="dashboard-stats">
+                <div class="stat-card total-card">
+                    <h3>Total Expenses</h3>
+                    <p class="stat-value" id="summary-total">₡0.00</p>
+                </div>
+                
+                <div class="stat-card category-card">
+                    <h3>Category with Most Expenses</h3>
+                    <p class="stat-value" id="summary-category">N/A</p>
+                </div>
+                
+                <div class="stat-card last-card">
+                    <h3>Last Recorded Expense</h3>
+                    <p class="stat-text" id="summary-last-expense">No expenses recorded</p>
+                </div>
+            </div>
 
-    
-        
-        <script src="../controllers/layout.js"></script>
-
-
+            <button class="btn-refresh" onclick="refreshDashboard()">Refresh Dashboard</button>
+        </div>
     </div>
+
+    <script src="../models/ExpenseRecordModel.js"></script>
+    <script src="../controllers/indexController.js"></script>
+    <script src="../controllers/layout.js"></script>
+</body>
+</html>
