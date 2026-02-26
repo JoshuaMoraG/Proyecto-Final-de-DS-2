@@ -13,7 +13,7 @@ function loadReports() {
             <div class="no-data">
                 <h2>💭 No expenses registered</h2>
                 <p>Start registering your expenses to see the reports</p>
-                <button onclick="location.href='registroGasto.html'">Register Expense</button>
+                <button onclick="location.href='expenseRecordView.html'">Register Expense</button>
             </div>
         `;
         return;

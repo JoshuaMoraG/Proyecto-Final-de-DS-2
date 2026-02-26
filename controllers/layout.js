@@ -21,16 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="logo" onclick="location.href='index.html'">
                 <img src="https://i.pinimg.com/736x/33/5f/fe/335ffe0c00bbeac180a99a894dbabcf7.jpg">
                 <div class="logo-text">
-                    <span>Expense</span>
-                    <span>  Control</span>
+                    <span>Control</span>
+                    <span>  Gastos</span>
                 </div>
             </div>
 
             <nav class="nav">
-                <a href="index.html">Home</a>
-                <a href="expenseRecordView.html">Register Expense</a>
-                <a href="expenseListView.html">My Expenses</a>
-                <a href="reportsView.html">Reports</a>
+                <a href="index.html">Inicio</a>
+                <a href="expenseRecordView.html">Registrar gasto </a>
+                <a href="expenseListView.html">Mis gastos</a>
+                <a href="reportsView.html">Reportes</a>
             </nav>
         </header>
     `;
