@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Home - Expense Control</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="dashboard-box">
-            <h1 class="welcome-title">Welcome to Your Expense Manager!</h1>
-            
+            <h1 class="welcome-title">Bienvenido a su Gestor de Gastos!</h1>
+
             <div class="dashboard-stats">
                 <div class="stat-card total-card">
-                    <h3>Total Expenses</h3>
+                    <h3>Total de gastos</h3>
                     <p class="stat-value" id="summary-total">₡0.00</p>
                 </div>
-                
+
                 <div class="stat-card category-card">
-                    <h3>Category with Most Expenses</h3>
+                    <h3>Categoría con mayor cantidad de gastos</h3>
                     <p class="stat-value" id="summary-category">N/A</p>
                 </div>
-                
+
                 <div class="stat-card last-card">
-                    <h3>Last Recorded Expense</h3>
-                    <p class="stat-text" id="summary-last-expense">No expenses recorded</p>
+                    <h3>Ultimo Gasto Registrado</h3>
+                    <p class="stat-text" id="summary-last-expense">Sin gastos registrados</p>
                 </div>
             </div>
 
-            <button class="btn-refresh" onclick="refreshDashboard()">Refresh Dashboard</button>
+            <button class="btn-refresh" onclick="refreshDashboard()">Actualizar el panel</button>
+
+            <div class="dashboard-actions">
+                <button class="btn" onclick="location.href='expenseListView.html'">🧾Ver Gastos</button>
+                <button class="btn" onclick="location.href='expenseRecordView.html'"> 📒Registrar Gasto</button>
+            </div>
+           
         </div>
     </div>
 
@@ -35,4 +43,5 @@
     <script src="../controllers/indexController.js"></script>
     <script src="../controllers/layout.js"></script>
 </body>
+
 </html>

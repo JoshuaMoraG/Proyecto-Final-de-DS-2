@@ -2,39 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>📝 Register Expense</title>
+        <title>📝 Registrar Gasto</title>
         <link rel="stylesheet" href="../styles/styles.css">
     </head><body>
 
         <div class="container">
 
             <div class="form-box">
-                <h2>📝 Register Expense</h2>
+                <h2>📝 Registrar Gasto</h2>
 
                 <form id="form">
                     <div class="input-group">
 
                         <!-- Date -->
-                        <label for="date">📅 Date</label>
+                        <label for="date">📅 Fecha</label>
                         <input type="date" id="date" required>
 
                         <!-- Category -->
-                        <label for="category">🏷️ Category</label>
+                        <label for="category">🏷️ Categoría</label>
                         <input type="text" id="category" list="categories-expenses" required>
 
                         <datalist id="categories-expenses">
-                            <option value="Food">
-                            <option value="Transportation">
-                            <option value="Entertainment">
-                            <option value="Health">
+                            <option value="Alimentación">
+                            <option value="Transporte">
+                            <option value="Entretenimiento">
+                            <option value="Salud">
                         </datalist>
 
                         <!-- Description -->
-                        <label for="description">📝 Description</label>
+                        <label for="description">📝 Descripción</label>
                         <input type="text" id="description" required>
 
                         <!-- Amount -->
-                        <label for="amount">💰 Amount</label>
+                        <label for="amount">💰 Monto</label>
                         <input type="number" id="amount"
                                placeholder="₡0.00"
                                step="0.01"
@@ -43,7 +43,7 @@
 
                     </div>
 
-                    <button type="submit">💾 Register Expense</button>
+                    <button type="submit">💾 Registrar Gasto</button>
                 </form>
             </div>
         </div>
